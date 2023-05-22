@@ -231,8 +231,18 @@ ul {
     font-weight: bold;
     color: black;
   }
-
-  
+#maule:hover {
+    box-shadow: 0 0 20px #FFFFFF;
+  }
+#nuble:hover {
+    box-shadow: 0 0 20px #FFFFFF;
+  }
+#araucania:hover {
+    box-shadow: 0 0 20px #FFFFFF;
+  }
+#biobio:hover {
+    box-shadow: 0 0 20px #FFFFFF;
+  }
   
   
   
