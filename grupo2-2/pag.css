@@ -193,7 +193,7 @@ ul {
 button:hover {
     box-shadow: 0px 0px 25px #FFFFFF;
   }
-#sup_afec_maule {
+#clima_maule {
     align-self: center;
     background-color: #FFF8EA;
     position: absolute;
@@ -207,7 +207,7 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#sup_afec_nuble {
+#clima_nuble {
     align-self: center;
     background-color: #FFF8EA;
     position: absolute;
@@ -221,7 +221,7 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#sup_afec_biobio {
+#clima_biobio {
     align-self: center;
     background-color: #FFF8EA;
     position: absolute;
@@ -235,7 +235,7 @@ button:hover {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-#sup_afec_araucania {
+#clima_araucania {
     align-self: center;
     background-color: #FFF8EA;
     position: absolute;
