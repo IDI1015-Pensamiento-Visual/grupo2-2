@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    //estas 5 interracciones se encargan de mostrar solo los objetivos al momento de abrir la página
     $(".info_nuble").hide();
     $(".info_biobio").hide();
     $(".info_araucania").hide();
@@ -6,12 +7,12 @@ $(document).ready(function(){
     $("#cuadro-interno").show();
 
     $("#maule").click(function(){
-
+        //esta y las siguientes 3 interacciones esconden todo lo que esté mostrandose en ese momento en la página, sin contar el mapa y mostrar la información de la región sobre la que se hizo click
         $("#cuadro-interno").hide();
         $(".info_nuble").hide();
         $(".info_biobio").hide();
         $(".info_araucania").hide();
-        $("#cant_incendios_maule").show();
+        $(".info_maule").show();
 
     });
     $("#nuble").click(function(){
@@ -20,7 +21,7 @@ $(document).ready(function(){
         $(".info_maule").hide();
         $(".info_biobio").hide();
         $(".info_araucania").hide();
-        $("#cant_incendios_nuble").show();
+        $(".info_nuble").show();
 
     });
     $("#biobio").click(function(){
@@ -29,7 +30,7 @@ $(document).ready(function(){
         $(".info_nuble").hide();
         $(".info_maule").hide();
         $(".info_araucania").hide();
-        $("#cant_incendios_biobio").show();
+        $(".info_biobio").show();
 
     });
     $("#araucania").click(function(){
@@ -38,11 +39,11 @@ $(document).ready(function(){
         $(".info_nuble").hide();
         $(".info_biobio").hide();
         $(".info_maule").hide();
-        $("#cant_incendios_araucania").show();
+        $(".info_araucania").show();
 
     });
     $(".boton_volver").click(function(){
-
+        //esta interacción, esconde la región en la que se esté en ese momento y vuelve a la página de apertura, con los objetivos
         $("#cuadro-interno").show();
         $(".info_nuble").hide();
         $(".info_biobio").hide();
