@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="es">
+<header>
+    <title>INCENDIOS</title>
+    <h1 id="titulo">INCENDIOS FORESTALES </h1>
+    <script src="jquery-3.6.4.min.js"></script>
+    <script async src="interacciones_main_page.js"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="papaparse.min.js"></script>
+    <script src="chart.js"></script>
+</header>
+<head id="head" class="main">
+    <meta charset="utf-8">
+</head>
+<body>
+    
+    <link rel="stylesheet" type="text/css" href="pag.css">
+    <div id="mapa">  <!--este div, como dice si id, corresponde al mapa de las 4 regiones, luego se divide en 4 botones, 1 por cada región-->
+    <button id="maule">
+        <img width=250px height=200px class= "imagenes" id="imgmaule" src="Maule.svg" alt="mapa maule" style="position: absolute; top: 120px; left: 150px;">
+        <span id="texto-superpuesto">MAULE</span>
+    </button>
+    <button id="nuble">
+        <img width=250x height=250px class= "imagenes" id="imgnuble " src="Nuble.svg" alt="mapa nuble" style="position: absolute; top: 260px; left: 100px;">
+        <span id="texto-superpuesto1">ÑUBLE</span>
+    </button>
+    <button id="biobio">
+        <img width=300px height=300px class= "imagenes" id = "imgbiobio" src="Biobio.svg" alt="mapa biobio" style="position: absolute; top: 400px; left: 20px;">
+        <span id="texto-superpuesto2">BIOBÍO</span>
+    </button>
+    <button id="araucania">
+        <img width=225px height=225px class= "imagenes" id= "imgaraucania" src="Araucania.svg" alt="mapa araucania" style="position: absolute; top: 590px; left:95px">
+        <span id="texto-superpuesto3">ARAUCANÍA</span>
+    </button>
+    </div>
+    <div class="objetivos_cuadro">
+    </div>
+
+    <div id="cuadro-interno"> <!--aquí se escribieron los objetivos de la pagina, será el primer cuadro blanco que aparecerá al abrir la página, desaparece al hacer click sobre alguna de las regiones-->
+        <ul>
+            <link rel="stylesheet" href="slider.css">
+
+                <ul>
+                    <li class="contexto">¡Bienvenidos a nuestra plataforma de visualización de datos de incendios forestales en las regiones de Maule, Ñuble, Biobío y Araucanía en Chile!</li>
+                    <li class="contexto">Descubre una manera innovadora de explorar y comprender la situación de los incendios forestales en estas regiones. Con nuestra herramienta interactiva, podrás visualizar los datos recopilados desde 2016 hasta 2021 y obtener una visión clara de la evolución de los incendios a lo largo del tiempo.</li>
+                    <li class="contexto">Sumérgete en gráficos y mapas interactivos que te permitirán explorar la distribución geográfica de los incendios forestales en cada región.</li>
+                </ul>
+        </ul>
+</div>
+<div class="info_maule" id="cant_incendios_maule"> <!--al hacer click sobre la región del Maule se desplegará este cuadro, contiene los respectivos gráficos de esta región y -->
+    <button id="boton_otro_cambio_maule">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+            <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+            <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
+        </svg>
+    </button>
+    <ul class = "slider">
+                <li id="slide1">
+                    <img id="2016" src="4.png" width="500" height="300" alt="primerslide"/>
+                </li>
+                <li id="slide2">
+                    <img id="2017" src="5.png" width="500" height="300" alt="segundoslide"/>
+                </li>
+                <li id="slide3">
+                    <img id="2018" src="6.png" width="500" height="300" alt="tercerslide"/>
+                </li>
+                <li id="slide4">
+                    <img id="2019" src="7.png" width="500" height="300" alt="cuartaslide"/>
+                </li>
+                <li id="slide5">
+                    <img id="2020" src="8.png" width="500" height="300" alt="quintaslide"/>
+                </li>
+                <li id="slide6">
+                    <img id="2021" src="9.png" width="500" height="300" alt="sextoslide"/>
+                </li>
+            </ul>
+            <ul class="menu">
+                <li>
+                    <a href="#slide1">2016</a>
+                </li>
+                <li>
+                    <a href="#slide2">2017</a>
+                </li>
+                <li>
+                    <a href="#slide3">2018</a>
+                </li>
+                <li>
+                    <a href="#slide4">2019</a>
+                </li>
+                <li>
+                    <a href="#slide5">2020</a>
+                </li>
+                <li>
+                    <a href="#slide6">2021</a>
+                </li>
+            </ul>
+            <!--aquí se definio las partes del slider, se ponen todas las imagenes y se define el menu con los años. Se repitió el mismo código para los 4 sliders-->
+        </div>
+    <div class="info_nuble" id="cant_incendios_nuble">
+        <button class="boton_volver">    
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
+            </svg>
+        </button>
+        <ul class = "slider">
+            <li id="slide1.1">
+                <img id="2016n" src="4.1.png" width="500" height="300" alt="primersliden"/>
+            </li>
+            <li id="slide2.1">
+                <img id="2017n" src="5.1.png" width="500" height="300" alt="segundosliden"/>
+            </li>
+            <li id="slide3.1">
+                <img id="2018n" src="6.1.png" width="500" height="300" alt="tercersliden"/>
+            </li>
+            <li id="slide4.1">
+                <img id="2019n" src="7.1.png" width="500" height="300" alt="cuartasliden"/>
+            </li>
+        </ul>
+        <ul id="menunuble">
+            <li>
+                <a href="#slide1.1">2018</a>
+            </li>
+            <li>
+                <a href="#slide2.1">2019</a>
+            </li>
+            <li>
+                <a href="#slide3.1">2020</a>
+            </li>
+            <li>
+                <a href="#slide4.1">2021</a>
+            </li>
+        </ul>
+    </div>
+    </div>
+    <div class="info_biobio" id="cant_incendios_biobio">
+        <button class="boton_volver">    
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
+            </svg>
+        </button>
+        <ul class = "slider">
+            <li id="slide1b">
+                <img id="2016b" src="4.2.png" width="500" height="300" alt="primerslide"/>
+            </li>
+            <li id="slide2b">
+                <img id="2017b" src="5.2.png" width="500" height="300" alt="segundoslide"/>
+            </li>
+            <li id="slide3b">
+                <img id="2018b" src="6.2.png" width="500" height="300" alt="tercerslide"/>
+            </li>
+            <li id="slide4b">
+                <img id="2019b" src="7.2.png" width="500" height="300" alt="cuartaslide"/>
+            </li>
+            <li id="slide5b">
+                <img id="2020b" src="8.2.png" width="500" height="300" alt="quintaslide"/>
+            </li>
+            <li id="slide6b">
+                <img id="2021b" src="9.2.png" width="500" height="300" alt="sextoslide"/>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li>
+                <a href="#slide1b">2016</a>
+            </li>
+            <li>
+                <a href="#slide2b">2017</a>
+            </li>
+            <li>
+                <a href="#slide3b">2018</a>
+            </li>
+            <li>
+                <a href="#slide4b">2019</a>
+            </li>
+            <li>
+                <a href="#slide5b">2020</a>
+            </li>
+            <li>
+                <a href="#slide6b">2021</a>
+            </li>
+        </ul>
+</div>
+    </div>
+    <div class="info_araucania" id="cant_incendios_araucania">
+        <button class="boton_volver">    
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
+                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
+            </svg>
+        </button>
+        <ul class = "slider">
+            <li id="slide1a">
+                <img id="2016a" src="4.3.png" width="500" height="300" alt="primerslide"/>
+            </li>
+            <li id="slide2a">
+                <img id="2017a" src="5.3.png" width="500" height="300" alt="segundoslide"/>
+            </li>
+            <li id="slide3a">
+                <img id="2018a" src="6.3.png" width="500" height="300" alt="tercerslide"/>
+            </li>
+            <li id="slide4a">
+                <img id="2019a" src="7.3.png" width="500" height="300" alt="cuartaslide"/>
+            </li>
+            <li id="slide5a">
+                <img id="2020a" src="8.3.png" width="500" height="300" alt="quintaslide"/>
+            </li>
+            <li id="slide6a">
+                <img id="2021a" src="9.3.png" width="500" height="300" alt="sextoslide"/>
+            </li>
+        </ul>
+        <ul class="menu">
+            <li>
+                <a href="#slide1a">2016</a>
+            </li>
+            <li>
+                <a href="#slide2a">2017</a>
+            </li>
+            <li>
+                <a href="#slide3a">2018</a>
+            </li>
+            <li>
+                <a href="#slide4a">2019</a>
+            </li>
+            <li>
+                <a href="#slide5a">2020</a>
+            </li>
+            <li>
+                <a href="#slide6a">2021</a>
+            </li>
+        </ul>
+    </div>
+    <script type="module" src="graficos.js"></script>
+</body>
+</html>
