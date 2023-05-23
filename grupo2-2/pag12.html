@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 <header>
-    <title>INCENDIOS</title>
+    <title>INCENDIOS</title> <!--aquí se define el nombre de la página en la barra de direcciones-->
     <h1 id="titulo">INCENDIOS FORESTALES </h1>
+    <!--las siguientes 5 lineas nos permiten enlazar todos los archivos js que necesitamos, incluyendo jquery-->
     <script src="jquery-3.6.4.min.js"></script>
     <script async src="interacciones_main_page.js"></script>
     <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -14,7 +15,7 @@
 </head>
 <body>
     
-    <link rel="stylesheet" type="text/css" href="pag.css">
+    <link rel="stylesheet" type="text/css" href="pag.css"> <!--permite que el css aactúe sobre la página-->
     <div id="mapa">  <!--este div, como dice si id, corresponde al mapa de las 4 regiones, luego se divide en 4 botones, 1 por cada región-->
     <button id="maule">
         <img width=250px height=200px class= "imagenes" id="imgmaule" src="Maule.svg" alt="mapa maule" style="position: absolute; top: 120px; left: 150px;">
@@ -50,7 +51,7 @@
 <div class="info_maule" id="cant_incendios_maule"> <!--al hacer click sobre la región del Maule se desplegará este cuadro, contiene los respectivos gráficos de esta región y -->
     <button id="boton_otro_cambio_maule">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
-            <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+            <rect x="10" y="5" width="115" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
             <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
         </svg>
     </button>
@@ -99,7 +100,7 @@
     <div class="info_nuble" id="cant_incendios_nuble">
         <button class="boton_volver">    
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
-                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <rect x="10" y="5" width="115" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
                 <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
             </svg>
         </button>
@@ -136,7 +137,7 @@
     <div class="info_biobio" id="cant_incendios_biobio">
         <button class="boton_volver">    
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
-                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <rect x="10" y="5" width="115" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
                 <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
             </svg>
         </button>
@@ -185,7 +186,7 @@
     <div class="info_araucania" id="cant_incendios_araucania">
         <button class="boton_volver">    
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="120" height="100" viewBox="0 0 120 100">
-                <rect x="10" y="5" width="105" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
+                <rect x="10" y="5" width="115" height="50" rx="20" ry="20" fill="#FF914D" stroke="black" stroke-width="2"/>
                 <text x="15" y="35" font-family="Verdana" font-size="10" fill="black">Volver a objetivos</text>
             </svg>
         </button>
