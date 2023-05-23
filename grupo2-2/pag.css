@@ -135,61 +135,6 @@ ul {
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
 }
-#sup_afec_maule {
-    align-self: center;
-    background-color: #FFF8EA;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    right: 100px;
-    top: 170px;
-    padding: 20px;
-    border-radius: 10% 10% 10% 10%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#sup_afec_nuble {
-    align-self: center;
-    background-color: #FFF8EA;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    right: 100px;
-    top: 170px;
-    padding: 20px;
-    border-radius: 10% 10% 10% 10%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#sup_afec_biobio {
-    align-self: center;
-    background-color: #FFF8EA;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    right: 100px;
-    top: 170px;
-    padding: 20px;
-    border-radius: 10% 10% 10% 10%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-#sup_afec_araucania {
-    align-self: center;
-    background-color: #FFF8EA;
-    position: absolute;
-    width: 500px;
-    height: 500px;
-    right: 100px;
-    top: 170px;
-    padding: 20px;
-    border-radius: 10% 10% 10% 10%;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-}
 
 #texto-superpuesto {
     position: absolute;
@@ -231,17 +176,19 @@ ul {
     display: block;
     text-align: left;
 }
+/*las siguienetes 4 opciones de formato hacen que al poner el mouse sobre alguna de las regiones aparezca una sombra blanca, indicando que es un botón*/
 #maule:hover {
-    box-shadow: 0 0 20px #FFFFFF;
+    box-shadow: 0 0 25px #FFFFFF;
   }
 #nuble:hover {
-    box-shadow: 0 0 20px #FFFFFF;
+    box-shadow: 0 0 25px #FFFFFF;
   }
 #araucania:hover {
-    box-shadow: 0 0 20px #FFFFFF;
+    box-shadow: 0 0 25px #FFFFFF;
   }
 #biobio:hover {
-    box-shadow: 0 0 20px #FFFFFF;
+    box-shadow: 0 0 25px #FFFFFF;
   }
+
   
   
