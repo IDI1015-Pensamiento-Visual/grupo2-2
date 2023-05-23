@@ -49,6 +49,11 @@ $(document).ready(function(){
         $(".info_maule").hide();
         $(".info_araucania").hide();
     });
-
+    $("#maule").hover(function(){
+        $("#maule").css("background-color", "white");
+    
+        }, function(){$("#maule").css("background-color", "pink");
+        
+        });
             
 });
